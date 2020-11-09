@@ -3,6 +3,7 @@ package signature
 import java.io.File
 import java.util.*
 
+var filepath = "C:/ReallyCoolStuff/" // Change to folder of medium.txt and roman.txt
 
 fun main() {
     val scanner = Scanner(System.`in`)
@@ -56,7 +57,7 @@ fun chars(size: String, char: Char, index: Int): String {
             if (index == 0) "5" else "     "
         }
     }
-    val file: Scanner = Scanner(File("C:/ReallyCoolStuff/${if (size == "large") "roman" else "medium"}.txt"))
+    val file: Scanner = Scanner(File("$ReallyCoolStuff${if (size == "large") "roman" else "medium"}.txt"))
     file.nextLine()
     var infoLine: String = file.nextLine()
     while (infoLine[0] != char) {
